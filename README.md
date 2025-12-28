@@ -57,5 +57,22 @@ The training data files tree should be (The data examples are shown in directory
 ```
 ## Training
 ```bash
-sh script/train_phase_1.sh
+sh scripts/train_phase_1.sh
+```
+- data_root: The data root, as ./data_examples
+- output_dir: The training output logs and checkpoints saving directory.
+- resolution: The resolution of the UNet in our diffusion model.
+- style_image_size: The resolution of the style image, can be different with resolution.
+- content_image_size: The resolution of the content image, should be the same as the resolution.
+- channel_attn: Whether to use the channel attention in the MCA block.
+- train_batch_size: The batch size in the training.
+- max_train_steps: The maximum of the training steps.
+- learning_rate: The learning rate when training.
+- ckpt_interval: The checkpoint saving interval when training.
+- drop_prob: The classifier-free guidance training probability.
+
+## Sampling
+Put your re-training checkpoint folder ckpt to the root directory, including the files unet.pth, content_encoder.pth, and style_encoder.pth.
+```bash
+ CUDA_VISIBLE_DEVICES=GPUID python sample_fyy.py
 ```
