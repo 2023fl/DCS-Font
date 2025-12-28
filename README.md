@@ -55,3 +55,7 @@ The training data files tree should be (The data examples are shown in directory
 │           │     └── ...
 
 ```
+## Training
+```bash
+sh script/train_phase_1.sh
+```
