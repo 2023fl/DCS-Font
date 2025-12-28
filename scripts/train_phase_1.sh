@@ -1,0 +1,26 @@
+CUDA_VISIBLE_DEVICES=3 python trains.py \
+    --seed=123 \
+    --experience_name="FontDiffuser_training_phase_1" \
+    --data_root="/media/text/afedbba0-93b4-490d-9d12-20e5b7b22aa7/file/pycharm/data/data_examples/" \
+    --output_dir="outputs/" \
+    --report_to="tensorboard" \
+    --resolution=96 \
+    --style_image_size=96 \
+    --content_image_size=96 \
+    --content_encoder_downsample_size=3 \
+    --channel_attn=True \
+    --content_start_channel=64 \
+    --style_start_channel=64 \
+    --train_batch_size=4 \
+    --perceptual_coefficient=0.01 \
+    --offset_coefficient=0.5 \
+    --max_train_steps=480000 \
+    --ckpt_interval=60000 \
+    --gradient_accumulation_steps=1 \
+    --log_interval=500 \
+    --learning_rate=1e-4 \
+    --lr_scheduler="linear" \
+    --lr_warmup_steps=10000 \
+    --drop_prob=0.1 \
+    --mixed_precision="no"
+    
