@@ -33,6 +33,11 @@ Step 3: Install the required packages.
 ```bash
 pip install -r requirements.txt
 ```
+## Datasets
+You can collect your own fonts from the following web sites (for non-commercial purpose):
+- https://www.foundertype.com/index.php/FindFont/index (acknowledgement: DG-Font refers this web site)
+- https://chinesefontdesign.com/
+- Any other web sites providing non-commercial fonts
 ## Training
 ### Data Construction
 The training data files tree should be (The data examples are shown in directory data_examples/train/):
@@ -74,5 +79,16 @@ sh scripts/train_phase_1.sh
 ## Sampling
 Put your re-training checkpoint folder ckpt to the root directory, including the files unet.pth, content_encoder.pth, and style_encoder.pth.
 ```bash
- CUDA_VISIBLE_DEVICES=GPUID python sample_fyy.py
+ CUDA_VISIBLE_DEVICES=GPUID python sample.py
 ```
+- ckpt_dir: The model checkpoints saving directory.
+- content_image_path: The content/source image path.
+- style_image_path: The style/reference image path.
+- save_image: set True if saving as images.
+- save_image_dir: The image saving directory, the saving files including an out_single.png and an out_with_cs.png.
+- device: The sampling device, recommended GPU acceleration.
+- guidance_scale: The classifier-free sampling guidance scale.
+- num_inference_steps: The inference step by DPM-Solver++.
+
+- character_input: If set True, use character string as content/source input.
+- content_character: The content/source content character string.
