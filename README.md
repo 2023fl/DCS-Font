@@ -94,3 +94,9 @@ Put your re-training checkpoint folder ckpt to the root directory, including the
 - content_character: The content/source content character string.
 ### Important Notice
 This code is directly related to a manuscript currently submitted to *The Visual Computer*.
+## Citation
+```bash
+If you find this code useful for your research, please consider citing the following manuscript:
+Y. Fang, et al., “DCS-Font: Dynamic Feature Enhancement for Few-Shot Font Generation” 
+```
+currently submitted to *The Visual Computer*.
