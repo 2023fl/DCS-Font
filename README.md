@@ -92,6 +92,9 @@ Put your re-training checkpoint folder ckpt to the root directory, including the
 
 - character_input: If set True, use character string as content/source input.
 - content_character: The content/source content character string.
+## Screenshot of the questionnaire interface example
+<img width="1116" height="933" alt="16bd8e4a1bd2db5542ab55d0d4a869f3" src="https://github.com/user-attachments/assets/5fcb7381-144e-41c0-9050-a50cf9568a06" />
+
 ### Important Notice
 This code is directly related to a manuscript currently submitted to *The Visual Computer*.
 ## Citation
