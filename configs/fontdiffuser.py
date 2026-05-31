@@ -11,7 +11,7 @@ def get_parser():
 
 
     ################# Experience #################
-    parser.add_argument("--seed", type=int, default=123, help="A seed for reproducible training.")
+    parser.add_argument("--seed", type=int, default=3407, help="A seed for reproducible training.")
     parser.add_argument("--experience_name", type=str, default="fontdiffuer_training")
     parser.add_argument("--data_root", type=str, default="data_examples",
                         help="The font dataset root path.",)
@@ -60,13 +60,13 @@ def get_parser():
     parser.add_argument("--nce_layers", type=str, default='0,1,2,3')
     parser.add_argument("--sc_coefficient", type=float, default=0.01)
     # train batch size
-    parser.add_argument("--train_batch_size", type=int, default=1,         # 4  改
+    parser.add_argument("--train_batch_size", type=int, default=8,         # 4  改
                         help="Batch size (per device) for the training dataloader.")
     # loss coefficient
     parser.add_argument("--perceptual_coefficient", type=float, default=0.01)
     parser.add_argument("--offset_coefficient", type=float, default=0.5)
     # step
-    parser.add_argument("--max_train_steps", type=int, default=440000,   # 改
+    parser.add_argument("--max_train_steps", type=int, default=480000,   # 改
                         help="Total number of training steps to perform.  If provided, overrides num_train_epochs.",)
     parser.add_argument("--ckpt_interval", type=int,default=60, help="The step begin to validate.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1, 
