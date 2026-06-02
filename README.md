@@ -76,6 +76,22 @@ sh scripts/train_phase_1.sh
 - ckpt_interval: The checkpoint saving interval when training.
 - drop_prob: The classifier-free guidance training probability.
 
+## Pretrained Models
+
+To facilitate reproducibility, we provide the pretrained checkpoint used in the UFUC setting reported in the paper.
+
+| Configuration | Checkpoint |
+|---------------|------------|
+| SFUC / UFSC / UFUC | [Download](https://drive.google.com/drive/folders/1hmPO9Aeyc7f0CugOwlPYEN5xjbaYSgiL?usp=sharing) |
+
+The released checkpoint can be directly used for inference and evaluation without retraining.
+
+
+
+
+
+
+
 ## Sampling
 Put your re-training checkpoint folder ckpt to the root directory, including the files unet.pth, content_encoder.pth, and style_encoder.pth.
 ```bash
