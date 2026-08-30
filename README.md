@@ -1,6 +1,52 @@
 # DCS-Font
 We propose DCS-Font for few-shot font generation—a diffusion-based framework featuring a Content-Style Feature Enhancement Encoder (CSFE-Encoder) and Multi-Scale Adaptive U-Net Modulation (MAUM) module to ensure content accuracy and style consistency.
 
+
+## Evaluation and Metric Implementation
+
+The quantitative evaluation of DCS-Font is performed using four metrics: Fréchet Inception Distance (FID), Learned Perceptual Image Patch Similarity (LPIPS), Structural Similarity Index Measure (SSIM), and the L1 distance. The same implementations and preprocessing settings are used for all methods and evaluation settings.
+
+### Evaluation metrics
+
+- **FID:** FID is computed using [`pytorch-fid`](https://github.com/mseitzer/pytorch-fid) with 2048-dimensional Inception-v3 features. Lower values indicate a smaller distributional distance between the generated and ground-truth images.
+
+- **LPIPS:** LPIPS is computed using the AlexNet backbone. Lower values indicate greater perceptual similarity between the generated and ground-truth images.
+
+- **SSIM:** SSIM is computed using `skimage.metrics.structural_similarity`. Each generated image and its corresponding ground-truth image are converted to grayscale and resized to 96 × 96 pixels. The default SSIM window setting is used. Higher values indicate greater structural similarity.
+
+- **L1:** L1 is calculated as the mean absolute difference between corresponding generated and ground-truth RGB tensors after their pixel values have been scaled to the range [0, 1]. Lower values indicate a smaller pixel-level reconstruction error.
+
+### Evaluation resources
+
+The following resources are provided in this repository:
+
+- Evaluation script: `Evaluate code/index_text_ffg_youhua.py`
+- SFUC font split: `data_examples/SFUC/ttf_200.txt`
+- UFSC font split: `data_examples/UFSC/ttf_60.txt`
+- UFUC font split: `data_examples/UFUC/ttf_60.txt`
+- Training character split: `data_examples/train-800.txt`
+- Test character split: `data_examples/test-1000.txt`
+- Pretrained checkpoints: see the checkpoint download link provided in this README
+
+### Input organization
+
+The evaluation script compares generated images with their corresponding ground-truth images. The two input directories should contain images with matching filenames.
+
+Example:
+
+```text
+generated_images/
+├── image_0001.png
+├── image_0002.png
+└── image_0003.png
+
+ground_truth_images/
+├── image_0001.png
+├── image_0002.png
+└── image_0003.png
+
+
+
 ## Installation
 ### Prerequisites (Recommended)
 
