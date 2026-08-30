@@ -303,7 +303,7 @@ def main(test_individual_styles=True):
 
     # base_dir = "samplefyy/UFUC"
     genimgs_dir = "samplefyy/SFUC"
-    gtimgs_dir = "/media/text/afedbba0-93b4-490d-9d12-20e5b7b22aa7/file/pycharm/data/data_examples/sampling/xhp/SFUC/"
+    gtimgs_dir = "/sampling/xhp/SFUC/"
 
     style_fonts = get_style_fonts(genimgs_dir)
     print(f"Found {len(style_fonts)} styles: {style_fonts}")
