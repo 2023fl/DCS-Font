@@ -26,7 +26,7 @@ The following resources are provided in this repository:
 - UFUC font split: `data_examples/UFUC/ttf_60.txt`
 - Training character split: `data_examples/train-800.txt`
 - Test character split: `data_examples/test-1000.txt`
-- Pretrained checkpoints: see the checkpoint download link provided in this README
+- Pretrained checkpoints
 
 ### Input organization
 
