@@ -160,12 +160,12 @@ Put your re-training checkpoint folder ckpt to the root directory, including the
 After installing the dependencies required by the repository, run:
 ```bash
 python "Evaluate code/index_text_ffg_youhua.py" \
-  --generated_dir "path/to/generated_images" \
+  --genimgs_dir "path/to/generated_images" \
   --ground_truth_dir "path/to/ground_truth_images" \
   --output_file "path/to/evaluation_results.txt"
 ```
 Arguments:
-- --generated_dir: directory containing the generated images.
+- --genimgs_dir: directory containing the generated images.
 - --ground_truth_dir: directory containing the corresponding ground-truth images.
 - --output_file: path used to save the evaluation results.
 
