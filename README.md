@@ -162,12 +162,12 @@ After installing the dependencies required by the repository, run:
 python "Evaluate code/index_text_ffg_youhua.py" \
   --genimgs_dir "path/to/generated_images" \
   --gtimgs_dir "path/to/ground_truth_images" \
-  --output_file "path/to/evaluation_results.txt"
+  --results_file "path/to/evaluation_results.txt"
 ```
 Arguments:
 - --genimgs_dir: directory containing the generated images.
 - --gtimgs_dir: directory containing the corresponding ground-truth images.
-- --output_file: path used to save the evaluation results.
+- --results_file: path used to save the evaluation results.
 
 ## Screenshot of the questionnaire interface example
 <img width="1116" height="933" alt="16bd8e4a1bd2db5542ab55d0d4a869f3" src="https://github.com/user-attachments/assets/5fcb7381-144e-41c0-9050-a50cf9568a06" />
