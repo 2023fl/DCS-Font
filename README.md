@@ -44,7 +44,7 @@ ground_truth_images/
 ├── image_0001.png
 ├── image_0002.png
 └── image_0003.png
-
+```
 
 
 ## Installation
